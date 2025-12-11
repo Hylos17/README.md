@@ -104,8 +104,6 @@ void bubbleSort(vector<string>& records) {
     int n = (int)records.size();
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
-            // Strings are formatted as "timestamp|category|details"
-            // Timestamp format: YYYY-MM-DD HH:MM so lexicographic compare works
             if (records[j] > records[j + 1]) {
                 swap(records[j], records[j + 1]);
             }
@@ -776,4 +774,3 @@ void ViewRecords(const string& username) {
     cout << "  TOTAL RECORDS:     " << recordCount << " records\n";
     cout << "==============================================================\n";
 }
-
